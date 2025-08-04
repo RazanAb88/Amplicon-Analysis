@@ -1,24 +1,30 @@
-\# Metagenomic Analysis Scripts
+# 🧫 Metagenomics Analysis of Biofilm Disruption by a Chemical Product
 
+## 🧠 Project Summary
 
+This project involved a metagenomic analysis to assess the effectiveness of a chemical product in disrupting complex biofilms formed by bacterial communities in drainage systems. The primary goal was to evaluate shifts in microbial composition before and after treatment using taxonomic profiling techniques.
 
-This repository contains R scripts for performing metagenomic analysis of microbiome data. The scripts process, analyse, and visualise microbial community data — starting from raw data processing (quality control, filtering, trimming, and merging) to taxonomic assignment of amplicons and plotting richness and diversity metrics.
+Due to confidentiality restrictions, raw data and detailed outputs are not included. However, the workflow, tools, and overall findings are shared below to demonstrate technical approach and insight.
 
+---
 
+## 🔬 Key Findings
 
-Developed in RStudio 2024.12.1+563 with R version 4.4.2.
+- The chemical product effectively **eliminated several dominant bacterial genera** known to contribute to biofilm formation.
+- However, the treatment **enabled proliferation of other resistant genera**, which eventually re-established a new biofilm community.
+- These findings suggest the product alters microbial ecosystems, potentially requiring combination treatments to prevent biofilm reformation.
 
+---
 
+## 🧰 Tools and Methods
 
-The dataset involves amplicon sequencing of 16S rDNA V3-V4 (50K-WBI), to investigate changes in microbial communities:
+This repository contains R scripts for performing metagenomic analysis of microbiome data. The scripts process, analyze, and visualize microbial community data — starting from raw data processing (quality control, filtering, trimming, and merging) to taxonomic assignment of amplicons and plotting richness and diversity metrics.
 
-
-
-\- \*\*Alpha diversity\*\*: within-sample diversity.  
-
-\- \*\*Beta diversity\*\*: between-sample diversity.  
-
-
+- **Environment**: RStudio 2024.12.1+563 with R version 4.4.2
+- **Sequencing**: Amplicon sequencing of 16S rDNA V3–V4 (50K-WBI)
+- **Analysis focus**:
+  - **Alpha diversity**: within-sample diversity
+  - **Beta diversity**: between-sample diversity
 
 ---
 
@@ -27,82 +33,47 @@ The dataset involves amplicon sequencing of 16S rDNA V3-V4 (50K-WBI), to investi
 \## 📂 Repository Structure
 
 
-
 metagenomics-analysis/
+
+
+├── data/ # (not included) Placeholder for raw/processed data
 
 ├── metagenomic\_analysis.R    # Main R script containing all analysis steps
 
-├── results/                  # Output figures and tables
+├── results/                  # Example outputs (non-sensitive)
+
+├── LICENSE                  # MIT License
 
 └── README.md                 # This documentation file
 
 
 
+---
 
+## 🛠 Requirements
 
+- **R** ≥ 4.4.2  
+- **RStudio** ≥ 2024.12.1  
 
+### Required R packages:
 
+- `dada2`
+- `Biostrings`
+- `phyloseq`
+- `ggplot2`
 
+**Reference database** (download separately):  
+`silva_nr99_v138.2_toGenus_trainset.fa.gz`
 
+### Install dependencies in R:
 
-
-
-
-\## 🛠 Requirements
-
-
-
-R >= 4.4.2
-
-
-
-RStudio >= 2024.12.1
-
-
-
-R packages:
-
-
-
-dada2
-
-
-
-Biostrings
-
-
-
-phyloseq
-
-
-
-ggplot2
-
-
-
-Database file: silva\_nr99\_v138.2\_toGenus\_trainset.fa.gz (please download separately)
-
-
-
-
-
-
-
-Install dependencies with:
-
+```r
 install.packages(c("phyloseq", "ggplot2"))
 
-
-
 if (!requireNamespace("BiocManager", quietly = TRUE))
-
-&nbsp; install.packages("BiocManager")
+    install.packages("BiocManager")
 
 BiocManager::install(c("Biostrings", "dada2"))
-
-
-
-
 
 
 
@@ -113,46 +84,27 @@ BiocManager::install(c("Biostrings", "dada2"))
 1- Clone the repository:
 
 
-
 git clone https://github.com/RazanAbb/metagenomics-analysis.git
 
 cd metagenomics-analysis
 
 
 
-2- Open the script file metagenomic analysis.R in RStudio.
+2- Open metagenomic_analysis.R in RStudio.
 
-
-
-3- Run the script in order:
-
-
+3- Run the script in order (sections are clearly marked in the script):
 
 Quality control and filtering
 
-
-
 Error frequency plotting
-
-
 
 Taxonomic assignment
 
-
-
 Diversity analysis and plotting
 
+4- Adjust file paths in the script to point to your input data.
 
-
-(These are marked as sections in the single script.)
-
-
-
-4- Adjust file paths inside the script to point to your input data as needed.
-
-
-
-5- Generated figures and tables will be saved in the results/ folder.
+5- Output figures and tables will be saved in the results/ folder.
 
 
 
@@ -169,12 +121,12 @@ This project is licensed under the [MIT License](https://opensource.org/license/
 
 
 
-
 Author
 
 
-
 Dr. Razan Abbara
+PhD in Microbiology | Metagenomics & Bioinformatics Specialist
+
 
 
 
