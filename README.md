@@ -18,13 +18,35 @@ Due to confidentiality restrictions, raw data and detailed outputs are not inclu
 
 ## 🧰 Tools and Methods
 
-This repository contains R scripts for performing metagenomic analysis of microbiome data. The scripts process, analyze, and visualize microbial community data — starting from raw data processing (quality control, filtering, trimming, and merging) to taxonomic assignment of amplicons and plotting richness and diversity metrics.
+This repository contains R scripts for performing metagenomic analysis of microbiome data. The scripts process, analyse, and visualise microbial community data — starting from raw data processing (quality control, filtering, trimming, and merging) to taxonomic assignment of amplicons and plotting richness and diversity metrics.
 
-- **Environment**: RStudio 2024.12.1+563 with R version 4.4.2
-- **Sequencing**: Amplicon sequencing of 16S rDNA V3–V4 (50K-WBI)
-- **Analysis focus**:
-  - **Alpha diversity**: within-sample diversity
-  - **Beta diversity**: between-sample diversity
+The workflow adapts an existing method from the DADA2 tutorial, tailored to the specific context of biofilm disruption. This adaptation demonstrates proficiency in:
+
+- R scripting for bioinformatics workflows
+
+- Statistical analysis of microbial diversity
+
+- Data visualisation using ggplot2 and phyloseq
+
+- Reproducibility through structured and annotated code
+
+
+Environment
+- RStudio 2024.12.1+563
+
+- R version 4.4.2
+
+
+Sequencing 
+
+Amplicon sequencing of 16S rDNA V3–V4 (50K-WBI)
+
+
+
+Analysis Focus
+- Alpha diversity: within-sample diversity
+
+- Beta diversity: between-sample diversity
 
 ---
 
