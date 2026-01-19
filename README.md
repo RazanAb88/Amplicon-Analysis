@@ -1,8 +1,8 @@
-# 🧫 Metagenomics Analysis of Biofilm Disruption by a Chemical Product
+# 🧫 Amplicon Sequencing Analysis of Microbial Community Shifts Following Biofilm Disruption
 
 ## 🧠 Project Summary
 
-This project involved a metagenomic analysis to assess the effectiveness of a chemical product in disrupting complex biofilms formed by bacterial communities in drainage systems. The primary goal was to evaluate shifts in microbial composition before and after treatment using taxonomic profiling techniques.
+This project involved a statistical analysis of microbial communities to assess the effectiveness of a chemical treatment in disrupting complex biofilms in drainage systems. The primary goal was to evaluate shifts in microbial composition before and after treatment using taxonomic profiling techniques.
 
 Due to confidentiality restrictions, raw data and detailed outputs are not included. However, the workflow, tools, and overall findings are shared below to demonstrate technical approach and insight.
 
@@ -18,7 +18,7 @@ Due to confidentiality restrictions, raw data and detailed outputs are not inclu
 
 ## 🧰 Tools and Methods
 
-This repository contains R scripts for performing metagenomic analysis of microbiome data. The scripts process, analyse, and visualise microbial community data — starting from raw data processing (quality control, filtering, trimming, and merging) to taxonomic assignment of amplicons and plotting richness and diversity metrics.
+This repository contains R scripts for analysing amplicon sequencing data of microbiome. The scripts process, analyse, and visualise microbial community data — starting from raw data processing (quality control, filtering, trimming, and merging) to taxonomic assignment of amplicons and plotting richness and diversity metrics.
 
 The workflow adapts an existing method from the DADA2 tutorial, tailored to the specific context of biofilm disruption. This adaptation demonstrates proficiency in:
 
@@ -44,9 +44,9 @@ Amplicon sequencing of 16S rDNA V3–V4 (50K-WBI)
 
 
 Analysis Focus
-- Alpha diversity: within-sample diversity
 
-- Beta diversity: between-sample diversity
+- **Alpha diversity analysis** using Shannon and Simpson indices to assess within-sample microbial diversity across time points.
+- **Beta diversity analysis** using Bray–Curtis dissimilarity and non-metric multidimensional scaling (NMDS) to evaluate differences in community composition before and after treatment.
 
 ---
 
@@ -58,9 +58,7 @@ Analysis Focus
 metagenomics-analysis/
 
 
-├── data/ # (not included) Placeholder for raw/processed data
-
-├── metagenomic\_analysis.R    # Main R script containing all analysis steps
+├── Amplicon_seq_analysis_tax_profiling.R    # Main R script containing all analysis steps
 
 ├── results/                  # Example outputs (non-sensitive)
 
